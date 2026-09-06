@@ -4,7 +4,7 @@ using System.Text;
 
 namespace MauiAppMinhasCompras.Helpers
 {
-    internal class SQLiteDatabaseHelper
+    internal class SQLiteDataBaseHelper
     {
     }
 }
