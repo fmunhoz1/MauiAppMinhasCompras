@@ -54,8 +54,8 @@ public partial class ListaProduto : ContentPage
         DisplayAlert("Total dos Produtos:", msg, "OK");
     }
 
-    private void MenuItem_Clciked(object sender, EventArgs e)
+    private async void MenuItem_Clicked(object sender, EventArgs e)
     {
-
+        //var item = (sender as MenuItem)?.CommandParameter as Produto;
     }
 }
