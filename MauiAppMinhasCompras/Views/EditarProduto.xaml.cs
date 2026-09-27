@@ -31,6 +31,10 @@ public partial class EditarProduto : ContentPage
         catch (Exception ex)
         {
             await DisplayAlert("Ops", ex.Message, "OK");
+
+            //Edição de produtos: a atualização dos dados também possui tratamento de exceções.
+            //Caso ocorra algum erro, uma mensagem é apresentada ao usuário.
+
         }
     }
 }

@@ -18,7 +18,7 @@ public partial class ListaProduto : ContentPage
 
         try
         {
-
+            lista.Clear();
 
             List<Produto> tmp = await App.Db.GetAll();
 
@@ -28,6 +28,10 @@ public partial class ListaProduto : ContentPage
         {
             await DisplayAlert("Ops", ex.Message, "Ok");
         }
+
+        //Listagem dos produtos: a consulta ao banco de dados também possui tratamento de
+        //exceções para evitar que erros interrompam o aplicativo.
+
 
     }
 
@@ -45,6 +49,11 @@ public partial class ListaProduto : ContentPage
 
     private async void txt_search_TextChanged(object sender, TextChangedEventArgs e)
     {
+
+        //Pesquisa de produtos: a pesquisa também possui tratamento de exceções
+        //durante a consulta ao banco de dados.
+
+
         try
         {
             string q = e.NewTextValue;
@@ -74,6 +83,11 @@ public partial class ListaProduto : ContentPage
     {
         try
         {
+
+            //Exclusão de produtos: antes da exclusão é solicitada uma confirmação ao usuário.
+            //O processo também possui tratamento de exceções.
+
+
             MenuItem selecionado = sender as MenuItem;
 
             Produto p = selecionado.BindingContext as Produto;

@@ -11,8 +11,12 @@ public partial class NovoProduto : ContentPage
 
 	private async void ToolbarItem_Clciked(object sender, EventArgs e)
 	{
-		try
-		{
+
+        //Cadastro de produtos: O código utiliza try e catch para capturar possíveis erros
+		//durante o cadastro do produto.
+
+        try
+        {
             // Cria um novo objeto Produto utilizando os dados preenchidos pelo usuário
             Produto p = new Produto
 			{
